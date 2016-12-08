@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body style="margin : 0px;" >
+ <p>메 모 작 성</p>
+
+      <p >내&nbsp;&nbsp;용&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;<textarea id="textarea" name="content" rows="4" cols="40"></textarea></p>
+        <ul>
+            <li>내용입력</li>
+            <li>내용입력</li>
+            <li>내용입력</li>
+            <li>내용입력</li>
+            <li>내용입력</li>
+        </ul>
+        <div>
+            
+            <button id="btn1">입력</button>
+            <button id="btn2">삭제</button>
+            <button id="btn3">수정</button>
+        </div>
+
+       <script type="text/javascript"> 
+         
+            
+             
+            var ul_elm = document.getElementsByTagName('ul')[0];
+            
+         
+
+            document.getElementById("btn1")
+            .addEventListener("click",function() {
+                var inputTxt = document.getElementById('textarea').value; 
+                var node = document.createElement('li');
+                node.innerText = inputTxt;
+                var refNode = ul_elm.children[0];
+                ul_elm.insertBefore(node,refNode);
+            });
+
+            document.getElementById("btn2")
+            .addEventListener("click",function() {
+                var refNode = ul_elm.children[0];
+                ul_elm.removeChild(refNode);
+            });
+
+            document.getElementById("btn3")
+            .addEventListener("click",function() {
+                var inputTxt = document.getElementById('textarea').value; 
+                var node = document.createElement('li');
+                node.innerText = inputTxt;
+                var refNode = ul_elm.children[0];
+                ul_elm.replaceChild(node,refNode);
+            });
+
+
+            
+
+        </script>
+    </body>
+</html>
