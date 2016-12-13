@@ -14,20 +14,15 @@
             <li>내용입력</li>
         </ul>
         <div>
-            
             <button id="btn1">입력</button>
             <button id="btn2">삭제</button>
             <button id="btn3">수정</button>
         </div>
 
-       <script type="text/javascript"> 
+       <script type> 
          
-            
-             
             var ul_elm = document.getElementsByTagName('ul')[0];
             
-         
-
             document.getElementById("btn1")
             .addEventListener("click",function() {
                 var inputTxt = document.getElementById('textarea').value; 
@@ -51,9 +46,6 @@
                 var refNode = ul_elm.children[0];
                 ul_elm.replaceChild(node,refNode);
             });
-
-
-            
 
         </script>
     </body>
